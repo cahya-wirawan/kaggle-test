@@ -88,7 +88,7 @@ class StanfordCars(Dataset):
         self.datapath = datapath
         self.phase = phase
         self.files = (datapath/phase).glob("**/*.jpg")
-        carnames = datapath/"names.csv"
+        carnames = datapath/"../../names.csv"
         df = pd.read_csv(carnames, header=None)
         car_labels = {name: i for i,name in enumerate(list(df[0]))}
         self.data_list = []
